@@ -1668,6 +1668,16 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
     }
 
     /**
+     * Convert the model instance to its array keys.
+     *
+     * @return array
+     */
+    public function toArrayKeys()
+    {
+       return array_keys($this->toArray());
+    }
+
+    /**
      * Convert the model instance to JSON.
      *
      * @param  int  $options
